@@ -42,7 +42,6 @@ dest:'dist',
         {
           getter: (page) => page.frontmatter.title,
           formatter: {
-            "/en/": "Title: $content",
             "/": "标题：$content",
           },
         },
