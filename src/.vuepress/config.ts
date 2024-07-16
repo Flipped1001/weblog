@@ -37,15 +37,7 @@ dest:'dist',
   plugins: [
     searchProPlugin({
       // 配置选项
-      autoSuggestions:true,
-      customFields: [
-        {
-          getter: (page) => page.frontmatter.title,
-          formatter: {
-            "/": "标题：$content",
-          },
-        },
-      ],
+      autoSuggestions: false
     }),
   ],
 
