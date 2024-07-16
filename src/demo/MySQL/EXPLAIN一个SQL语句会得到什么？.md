@@ -1,10 +1,10 @@
 ---
 title: EXPLAIN 一个SQL语句
 # date: 2024-05-28
-# tags:
-#  - sql
-# categories:
-#  - mysql
+tags:
+ - sql
+categories:
+ - mysql
 ---
 
 <!-- more -->
