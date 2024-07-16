@@ -1,4 +1,4 @@
----
+<!-- ---
 title: CORS策略
 date: 2024-06-15
 tags:
@@ -6,7 +6,7 @@ tags:
 categories:
  - 跨域
  - 同源策略
----
+--- -->
 
 <!-- more -->
 
