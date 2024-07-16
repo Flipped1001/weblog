@@ -3,7 +3,7 @@ name: 部署文档
 on:
   push:
     branches:
-      - master  # 当 master 分支有推送时触发
+      - main  # 当 master 分支有推送时触发
 
 permissions:
   contents: write
