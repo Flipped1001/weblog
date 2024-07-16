@@ -1,3 +1,12 @@
+---
+title: SQL的DDL
+date: 2024-06-15
+tags:
+ - SQL
+categories:
+ - MySQL
+---
+
 数据库（DB）
 
 MySql关系型数据库：

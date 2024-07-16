@@ -1,3 +1,13 @@
+---
+title: CORS策略
+date: 2024-06-15
+tags:
+ - 跨域问题
+categories:
+ - 跨域
+ - 同源策略
+---
+
 #### CORS( Cross-Origin Resource Sharing )跨域资源共享：
 
 CORS是一种机制，依赖于浏览器的安全策略，通常为了防止恶意网站从另一个域请求资源，从而保护用户的数据安全。

@@ -1,4 +1,13 @@
-># EXPLAIN 一个SQL语句可以查询到什么？
+---
+title: EXPLAIN 一个SQL语句可以查询到什么？
+date: 2024-05-28
+tags:
+ - sql
+categories:
+ - MySQL
+---
+>
+# EXPLAIN 一个SQL语句可以查询到什么？
 >
 ![](2024-07-16-11-04-59.png)
 >
