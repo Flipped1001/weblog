@@ -5,16 +5,17 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-  "docs:build": "vuepress-webpack build src",
-  "docs:clean-dev": "vuepress-webpack dev src --clean-cache",
-  "docs:dev": "vuepress-webpack dev src",
-  "docs:update-package": "pnpm dlx vp-update"
-},
+    "docs:build": "vuepress-webpack build src",
+    "docs:clean-dev": "vuepress-webpack dev src --clean-cache",
+    "docs:dev": "vuepress-webpack dev src",
+    "docs:update-package": "pnpm dlx vp-update"
+  },
   "devDependencies": {
     "@vuepress/bundler-webpack": "2.0.0-rc.14",
+    "sass-loader": "^14.2.1",
     "vue": "^3.4.31",
     "vuepress": "2.0.0-rc.14",
-    "vuepress-theme-hope": "2.0.0-rc.51",
-    "sass-loader": "^14.2.1"
+    "vuepress-plugin-search-pro": "2.0.0-rc.51",
+    "vuepress-theme-hope": "2.0.0-rc.51"
   }
 }

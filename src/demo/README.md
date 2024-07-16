@@ -1,9 +1,11 @@
 ---
-title: Features demo
+star: true
+sticky: 1
+title: 学习笔记
 index: false
-icon: laptop-code
+icon: server
 category:
-  - Guide
+  - 计算机基础
 ---
 
 <Catalog />

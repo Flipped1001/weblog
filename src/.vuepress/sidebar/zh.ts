@@ -1,26 +1,25 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export const zhSidebar = sidebar({
-  "/zh/": [
-    "",
+  
+
+  "/demo/": [
+    "/",
     {
-      text: "如何使用",
+      text: "学习笔记",
       icon: "laptop-code",
-      prefix: "demo/",
-      link: "demo/",
+      link: "/demo/",
       children: "structure",
     },
+  ],
+
+  "/LeetCode/": [
+    "/",
     {
-      text: "文章",
-      icon: "book",
-      prefix: "posts/",
+      text: "每日力扣题",
+      icon: "laptop-code",
+      link: "/LeetCode/",
       children: "structure",
-    },
-    "intro",
-    {
-      text: "幻灯片",
-      icon: "person-chalkboard",
-      link: "https://plugin-md-enhance.vuejs.press/zh/guide/content/revealjs/demo.html",
     },
   ],
 });

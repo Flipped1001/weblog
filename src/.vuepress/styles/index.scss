@@ -1,1 +1,66 @@
 // place your custom styles here
+.vp-blog-hero-image {
+    width: 200px; /* 指定宽度 */
+    height: 200px; /* 指定高度 */
+    border-radius: 50%; /* 将图片呈现为圆形 */
+    object-fit: cover; /* 保持图片比例并填充容器 */
+    overflow: hidden; /* 隐藏溢出部分 */
+  }
+  
+  .vp-blogger-avatar {
+    width: 100px; /* 指定宽度 */
+    height: 100px; /* 指定高度 */
+    border-radius: 50%; /* 将图片呈现为圆形 */
+    object-fit: cover; /* 保持图片比例并填充容器 */
+    overflow: hidden; /* 隐藏溢出部分 */
+  }
+
+  .vp-nav-logo {
+    width: 40px; /* 指定宽度 */
+    height: 40px; /* 指定高度 */
+    border-radius: 50%; /* 将图片呈现为圆形 */
+    object-fit: cover; /* 保持图片比例并填充容器 */
+    overflow: hidden; /* 隐藏溢出部分 */
+  }
+
+  .search-pro-key-hints {
+    display: none;
+  }
+
+  #color-mode-switch {
+    color: #636060; /* 设置按钮文字默认颜色为深灰色 */
+    transition: color 0.3s ease; /* 添加文字颜色过渡效果 */
+}
+
+#color-mode-switch:hover {
+    color: #007bff; /* 设置鼠标悬停时的按钮文字颜色为蓝色 */
+}
+
+
+.vp-blog-hero-description {
+  font-family: "Ma Shan Zheng", cursive;
+}
+
+.vp-blog-hero-title {
+  font-family:"Sevillana", 草书 /* 设置字体 */
+  /* 在这里添加其他字体效果，比如字号、颜色等 */
+}
+
+.vp-navbar {
+  font-family: "Noto Serif SC", serif; /* 设置字体 */
+  /* 在这里添加其他字体效果，比如字号、颜色等 */
+}
+
+.vp-blogger-name{
+  font-family:"Sevillana", 草书;
+  font-size: 28px;
+}
+
+.vp-blogger-description{
+  font-family: "Ma Shan Zheng", cursive;
+  font-size: 18px;
+}
+
+.hitokoto{
+  font-family: "Ma Shan Zheng", cursive;
+}
