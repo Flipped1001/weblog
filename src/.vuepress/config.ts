@@ -41,10 +41,10 @@ dest:'dist',
       customFields: [
         {
           getter: (page) => page.frontmatter.title,
-          formatter: {
-            "/en/": "Title: $content",
-            "/": "标题：$content",
-          },
+          // formatter: {
+          //   "/en/": "Title: $content",
+          //   "/": "标题：$content",
+          // },
         },
       ],
     }),
