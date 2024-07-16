@@ -1,5 +1,5 @@
 ---
-title: EXPLAIN 一个SQL语句可以查询到什么？
+title: EXPLAIN 一个SQL语句
 date: 2024-05-28
 tags:
  - sql
