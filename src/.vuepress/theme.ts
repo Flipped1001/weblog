@@ -107,7 +107,7 @@ export default hopeTheme({
 
     photoSwipe:{selector:".theme-hope-content img"},
 
-    searchPro:true,//搜索栏
+    // searchPro:true,//搜索栏
 
     // watermark:true, //水印
     blog: true,
