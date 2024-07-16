@@ -4,7 +4,7 @@ date: 2024-06-15
 tags:
  - SQL
 categories:
- - MySQL
+ - mysql
 ---
 
 <!-- more -->
