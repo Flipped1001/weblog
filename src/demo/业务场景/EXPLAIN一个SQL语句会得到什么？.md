@@ -10,7 +10,7 @@ categories:
 <!-- more -->
 
 
-# EXPLAIN 一个SQL语句可以查询到什么？
+### EXPLAIN 一个SQL语句可以查询到什么？
 >
 ![](2024-07-16-11-04-59.png)
 >
