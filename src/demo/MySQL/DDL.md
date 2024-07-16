@@ -1,11 +1,11 @@
-<!-- ---
+---
 title: SQL的DDL
 date: 2024-06-15
 tags:
  - SQL
 categories:
  - mysql
---- -->
+---
 
 <!-- more -->
 
