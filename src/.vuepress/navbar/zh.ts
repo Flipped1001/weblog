@@ -16,12 +16,12 @@ export const zhNavbar = navbar([
         {
           "text": "计算机网络",
           "icon": "tag",
-          "link": "/demo/"
+          "link": "/demo/计算机网络"
         },
         {
           "text": "操作系统",
           "icon": "tag",
-          "link": "/posts/"
+          "link": "/posts/计算机操作系统"
         }
       ]
       },
