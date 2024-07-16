@@ -29,3 +29,4 @@ The theme also has the following elements:
 - [Print button](https://theme-hope.vuejs.press/guide/interface/others.html#print-button)
 
 You can customize them in theme options and page frontmatter.
+45788
