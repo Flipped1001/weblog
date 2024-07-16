@@ -67,4 +67,6 @@ jobs:
             cd /www/wwwroot/www.flipped1001.cn
              git init  # 初始化 Git 仓库，如果尚未初始化
              git remote add origin https://github.com/Flipped1001/weblog.git  # 设置远程仓库地址
+             git fetch origin
+             git checkout -b gh-pages origin/gh-pages
              git pull origin gh-pages  # 拉取最新的代码
