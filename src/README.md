@@ -4,7 +4,7 @@ layout: BlogHome
 icon: home
 title: Blog Home
 heroImage: https://theme-hope-assets.vuejs.press/logo.svg
-heroText: The name of your blog
+heroText: 你哈是对和
 tagline: You can put your slogan here
 heroFullScreen: true
 projects:
