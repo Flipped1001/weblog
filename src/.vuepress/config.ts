@@ -20,8 +20,8 @@ dest:'dist',
     },
     "/": {
       lang: "zh-CN",
-      title: "博客主页",
-      description: "vuepress-theme-hope 的博客演示",
+      title: "Flipped",
+      description: "Flipped 的博客演示",
     },
   },
 

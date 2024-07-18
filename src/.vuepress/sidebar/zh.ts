@@ -22,4 +22,15 @@ export const zhSidebar = sidebar({
       children: "structure",
     },
   ],
+
+  "/Work/": [
+    "/",
+    {
+      text: "实用问题",
+      icon: "laptop-code",
+      link: "/demo/",
+      children: "structure",
+    },
+  ],
+
 });

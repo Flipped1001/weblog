@@ -41,4 +41,10 @@ export const zhNavbar = navbar([
     link: "/LeetCode/",
   },
 
+  {
+    text: "超级实用",
+    icon: "tag",
+    link: "/Work/",
+  },
+
 ]);
