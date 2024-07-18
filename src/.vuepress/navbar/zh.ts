@@ -5,7 +5,7 @@ export const zhNavbar = navbar([
 
 
   {
-    text: "指南",
+    text: "学习笔记",
     icon: "bars",
     prefix: "/",
     children:[
@@ -23,18 +23,16 @@ export const zhNavbar = navbar([
           "icon": "tag",
           "link": "/demo/计算机操作系统/"
         }
+        {
+          "text": "MySQL",
+          "icon": "tag",
+          "link": "/demo/计算机操作系统/"
+        }
       ]
       },
     ]
 
   },
-
-  {
-    text: "学习笔记",
-    icon: "tag",
-    link: "/demo/",
-  },
-
   {
     text: "LeetCode",
     icon: "tag",
