@@ -40,7 +40,7 @@ export const zhNavbar = navbar([
   },
 
   {
-    text: "超级实用",
+    text: "applied",
     icon: "tag",
     link: "/Work/",
   },
