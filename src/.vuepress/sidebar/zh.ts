@@ -33,4 +33,14 @@ export const zhSidebar = sidebar({
     },
   ],
 
+  "/tool/": [
+    "/",
+    {
+      text: "工具",
+      icon: "laptop-code",
+      link: "/tool/",
+      children: "structure",
+    },
+  ],
+
 });
