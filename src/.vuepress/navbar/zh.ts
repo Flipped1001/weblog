@@ -22,7 +22,7 @@ export const zhNavbar = navbar([
           "text": "操作系统",
           "icon": "tag",
           "link": "/demo/计算机操作系统/"
-        }
+        },
         {
           "text": "MySQL",
           "icon": "tag",
