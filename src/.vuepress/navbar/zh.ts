@@ -26,7 +26,7 @@ export const zhNavbar = navbar([
         {
           "text": "MySQL",
           "icon": "tag",
-          "link": "/demo/计算机操作系统/"
+          "link": "/demo/MySQL/"
         }
       ]
       },
@@ -43,6 +43,32 @@ export const zhNavbar = navbar([
     text: "超级实用",
     icon: "tag",
     link: "/Work/",
+  },
+
+
+  {
+    text: "tools",
+    icon: "bars",
+    prefix: "/",
+    children:[
+      {
+      "text": "工具",
+      "icon": "folder",
+      "children": [
+        {
+          "text": "go",
+          "icon": "tag",
+          "link": "/tool/go/"
+        },
+        {
+          "text": "python",
+          "icon": "tag",
+          "link": "/tool/python/"
+        },
+      ]
+      },
+    ]
+
   },
 
 ]);
