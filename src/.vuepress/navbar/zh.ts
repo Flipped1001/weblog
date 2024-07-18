@@ -58,12 +58,12 @@ export const zhNavbar = navbar([
         {
           "text": "go",
           "icon": "tag",
-          "link": "/tool/go/"
+          "link": "/tool/go基础/"
         },
         {
           "text": "python",
           "icon": "tag",
-          "link": "/tool/python/"
+          "link": "/tool/python基础/"
         },
       ]
       },
