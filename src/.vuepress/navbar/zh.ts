@@ -5,7 +5,7 @@ export const zhNavbar = navbar([
 
 
   {
-    text: "学习笔记",
+    text: "cahier",
     icon: "bars",
     prefix: "/",
     children:[
