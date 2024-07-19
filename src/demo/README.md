@@ -6,7 +6,7 @@ index: false
 icon: server
 category:
   - 计算机基础
-cover: /assets/images/2024-07-18-21-36-07.png
+cover: /assets/images/top.webp
 ---
 
 <!-- <Catalog /> -->
