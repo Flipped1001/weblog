@@ -2,6 +2,8 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import { getDirname, path } from "vuepress/utils";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
+import { PopperShape } from "@moefy-canvas/theme-popper";
+import { popperPlugin } from "./public/vuepress-plugin-popper/index.js";
 
 
 
@@ -39,8 +41,17 @@ dest:'dist',
       // 配置选项
       autoSuggestions: false
     }),
+
+    popperPlugin({
+      config: {
+        shape: PopperShape.Star,
+        size: 1.95,
+        numParticles: 8,
+      },
+    }),
   ],
 
+   
   head:[
 
     
