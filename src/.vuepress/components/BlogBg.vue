@@ -205,7 +205,7 @@ html[data-theme='dark'] {
   .theme-container {
     .vp-sidebar {
       background: transparent; // 侧边栏透明度
-      // backdrop-filter: blur(2px); // 毛玻璃效果
+     backdrop-filter: blur(2px); // 毛玻璃效果
     }
 
     .theme-hope-content {
