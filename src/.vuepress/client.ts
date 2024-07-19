@@ -5,8 +5,9 @@ import 'vuepress-theme-hope/presets/bounce-icon.scss';
 import 'vuepress-theme-hope/presets/shinning-feature-panel.scss';
 import { defineAsyncComponent } from 'vue';
 
-
+const TopNavBeautify = defineAsyncComponent(() => import('./components/TopNavBeautify.vue'));
 const BlogBg = defineAsyncComponent(() => import('./components/BlogBg.vue'));
+
 
 export default defineClientConfig({
   setup: () => {
@@ -15,6 +16,7 @@ export default defineClientConfig({
   },
 
   rootComponents:[
-    BlogBg
+    BlogBg,
+    TopNavBeautify
   ]
 });
