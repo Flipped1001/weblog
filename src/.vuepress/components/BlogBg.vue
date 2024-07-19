@@ -92,11 +92,11 @@ onMounted(() => {
 });
 </script>
 
-<template>
+<!-- <template>
   <ClientOnly>
     <div class="none">背景美化</div>
   </ClientOnly>
-</template>
+</template> -->
 
 <style lang="scss">
 @mixin noEvent {
@@ -175,10 +175,10 @@ html[data-theme='dark'] {
   }
 }
 
-@mixin theme-hope-content-style {
-  border-radius: 0.4rem;
-  padding-top: 1px !important;
-}
+// @mixin theme-hope-content-style {
+//   border-radius: 0.4rem;
+//   padding-top: 1px !important;
+// }
 @mixin toc-style {
   border-radius: 0.4rem;
   padding: 0.6rem 0;
@@ -208,10 +208,10 @@ html[data-theme='dark'] {
       // backdrop-filter: blur(2px); // 毛玻璃效果
     }
 
-    .theme-hope-content {
-      @include theme-hope-content-style;
-      @include content-bg-style;
-    }
+    // .theme-hope-content {
+    //   @include theme-hope-content-style;
+    //   @include content-bg-style;
+    // }
   }
 }
 
@@ -237,21 +237,21 @@ html[data-theme='dark'] {
       background: transparent; // 侧边栏透明度
     }
 
-    .theme-hope-content {
-      @include theme-hope-content-style;
-      @include content-bg-style;
-    }
+    // .theme-hope-content {
+    //   @include theme-hope-content-style;
+    //   @include content-bg-style;
+    // }
   }
 }
 
 @media screen and (max-width: 1240px) {
   .theme-container {
-    .theme-hope-content {
-      padding-left: 1.2rem;
-      padding-right: 1.2rem;
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
+    // .theme-hope-content {
+    //   padding-left: 1.2rem;
+    //   padding-right: 1.2rem;
+    //   margin-left: 1rem;
+    //   margin-right: 1rem;
+    // }
   }
 }
 
@@ -261,10 +261,10 @@ html[data-theme='dark'] {
       padding-top: 20px;
     }
 
-    .theme-hope-content {
-      margin-left: 0.2rem;
-      margin-right: 0.2rem;
-    }
+    // .theme-hope-content {
+    //   margin-left: 0.2rem;
+    //   margin-right: 0.2rem;
+    // }
   }
 
   [data-theme='light'] {
