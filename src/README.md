@@ -2,12 +2,12 @@
 home: true
 layout: BlogHome
 icon: home
-title: 博客主页
+title: home
 heroImage: /assets/images/head.jpg
 heroText: Flipped
 heroFullScreen: true
 tagline: 天下之事，成于惧而败于忽
-heroImageDark: /assets/images/logo2.jpg
+heroImageDark: /assets/images/haed2.jpg
 projects:
   - icon: project
     name: 项目名称
@@ -24,5 +24,5 @@ projects:
     desc: 伙伴详细介绍
     link: https://你的伙伴链接
 
-footer: 豫ICP备2024072453号
+footer: 豫ICP备2024072453号 
 ---

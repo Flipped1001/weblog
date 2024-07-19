@@ -11,7 +11,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "/assets/images/logo2.jpg",
+  // logo: "/assets/images/logo2.png",
 
   repo: "https://github.com/Flipped1001",
 
