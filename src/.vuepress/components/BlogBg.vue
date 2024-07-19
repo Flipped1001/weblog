@@ -245,14 +245,14 @@ html[data-theme='dark'] {
 }
 
 @media screen and (max-width: 1240px) {
-  .theme-container {
+  // .theme-container {
     // .theme-hope-content {
     //   padding-left: 1.2rem;
     //   padding-right: 1.2rem;
     //   margin-left: 1rem;
     //   margin-right: 1rem;
     // }
-  }
+  // }
 }
 
 @media screen and (max-width: 719px) {
