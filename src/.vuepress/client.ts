@@ -5,7 +5,7 @@ import 'vuepress-theme-hope/presets/bounce-icon.scss';
 import 'vuepress-theme-hope/presets/shinning-feature-panel.scss';
 import { defineAsyncComponent } from 'vue';
 
-
+const BlogBg = defineAsyncComponent(() => import('./components/BlogBg.vue'));
 
 
 export default defineClientConfig({
@@ -13,4 +13,8 @@ export default defineClientConfig({
     setupTransparentNavbar({ type: 'homepage' });
     setupSnowFall();
   },
+
+  rootComponents:[
+    BlogBg
+  ]
 });
