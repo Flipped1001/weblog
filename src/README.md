@@ -7,7 +7,7 @@ heroImage: /assets/images/head.jpg
 heroText: Flipped
 heroFullScreen: true
 tagline: 天下之事，成于惧而败于忽
-heroImageDark: /assets/images/haed2.jpg
+heroImageDark: /assets/images/head2.jpg
 projects:
   - icon: project
     name: 项目名称
