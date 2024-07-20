@@ -2,6 +2,8 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
+
+
 export default hopeTheme({
   hostname: "https://flipped1001.cn",
 
@@ -9,9 +11,10 @@ export default hopeTheme({
     name: "Flipped",
   },
 
+  favicon:"/assets/images/logo.svg",
   iconAssets: "fontawesome-with-brands",
-
-  // logo: "/assets/images/logo2.png",
+  
+  // logo: "/assets/images/head.jpg",
 
   repo: "https://github.com/Flipped1001",
 
