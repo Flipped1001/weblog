@@ -14,7 +14,7 @@ export default hopeTheme({
   favicon:"/assets/images/logo.svg",
   iconAssets: "fontawesome-with-brands",
   
-  // logo: "/assets/images/head.jpg",
+  logo: "/assets/images/logo.svg",
 
   repo: "https://github.com/Flipped1001",
 
