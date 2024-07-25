@@ -10,9 +10,9 @@ tagline: 天下之事，成于惧而败于忽
 heroImageDark: /assets/images/head2.jpg
 projects:
   - icon: project
-    name: 项目名称
-    desc: 项目详细描述
-    link: https://你的项目
+    name: 今日热点
+    desc: 汇聚天下大事
+    link: https://manyua.cn
 
   - icon: link
     name: 链接名称
