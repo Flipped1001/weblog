@@ -12,7 +12,7 @@ projects:
   - icon: project
     name: 今日热点
     desc: 汇聚天下大事
-    link: https://manyua.cn
+    link: https://sss.manyua.cn
 
   - icon: link
     name: 链接名称
