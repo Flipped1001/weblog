@@ -33,7 +33,6 @@ func Start() {
 ```
 middleware.go
 
-
 ```go
 func JWTAuthMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
