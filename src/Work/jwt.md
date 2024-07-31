@@ -9,6 +9,8 @@ categories:
 ---
 
 
+- 用go语言实现JWT登录认证
+
 Start.go
 
 ```go
@@ -18,6 +20,7 @@ func Start() {
 	r.POST("/login", LoginHandler)
 
 	auth := r.Group("/auth")
+	auth.Use(AuthMiddleware())
 	auth.Use(JWTAuthMiddleware())
 
 	{
@@ -45,7 +48,7 @@ func JWTAuthMiddleware() gin.HandlerFunc {
 		}
 		// 去掉Bearer前缀，获取完整的token字符串
 		tokenString := strings.TrimPrefix(authHeader, "Bearer ")
-		token, err := jwt.ParseWithClaims(tokenString, &CustomClaims{}, func(token *jwt.Token) (interface{}, error) {
+		token, err := jwt.ParseWithClaims(tokenString, &Claims{}, func(token *jwt.Token) (interface{}, error) {
 			return secretKey, nil
 		})
 		// 判断err以及令牌是否有效
@@ -54,6 +57,18 @@ func JWTAuthMiddleware() gin.HandlerFunc {
 			c.Abort()
 			return
 		}
+		//检查令牌是否在 Redis 中存在
+		_, err = rdb.Get(context.Background(), tokenString).Result()
+		if errors.Is(err, redis.Nil) {
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "invalid token"})
+			c.Abort()
+			return
+		} else if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "server error"})
+			c.Abort()
+			return
+		}
+
 
 		if claims, ok := token.Claims.(*Claims); ok {
 			c.Set("username", claims.Username)
@@ -63,6 +78,22 @@ func JWTAuthMiddleware() gin.HandlerFunc {
 			return
 		}
 
+		c.Next()
+	}
+}
+
+func AuthMiddleware() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		token, err := c.Cookie("token")
+		if err != nil {
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "no token provided"})
+			c.Abort()
+			return
+		}
+
+		fmt.Println(token)
+		//将令牌添加到请求头中
+		c.Request.Header.Set("Authorization", "Bearer "+token)
 		c.Next()
 	}
 }
@@ -96,7 +127,18 @@ func generateToken(username string) (string, error) {
 		},
 	}
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
-	return token.SignedString(secretKey) // 把密钥写进去
+	tokenString,err := token.SignedString(secretKey) // 把密钥写进去
+	if err != nil {
+		return "", err
+	} // 把密钥写进去
+
+	// 存储令牌到 Redis
+	err = rdb.Set(context.Background(), tokenString, username, 3600*time.Second).Err()
+	if err != nil {
+		return "", err
+	}
+
+	return tokenString, nil
 }
 
 func LoginHandler(c *gin.Context) {
@@ -114,7 +156,8 @@ func LoginHandler(c *gin.Context) {
 			c.JSON(500, gin.H{"error": "Failed to generate token"})
 			return
 		}
-		c.JSON(200, gin.H{"token": token})
+		c.SetCookie("token", token, 3600, "/", "localhost", false, true)
+		c.JSON(http.StatusOK, gin.H{"message": "login successful"})
 		return
 	} else {
 		c.JSON(401, gin.H{"error": "Unauthorized"})
@@ -128,5 +171,40 @@ handler.go
 func ProtectedHandler(c *gin.Context) {
 	username, _ := c.Get("username")
 	c.JSON(200, gin.H{"message": "Hello " + username.(string)})
+}
+```
+
+Rdb.go
+```go
+var (
+	rdb *redis.Client
+)
+
+func init() {
+	rdb = redis.NewClient(&redis.Options{
+		Addr: "localhost:6379",
+	})
+}
+```
+
+removeJWT.go
+```go
+func RevokeToken(c *gin.Context) {
+	tokenString, err := c.Cookie("token")
+	if err != nil {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "no token provided"})
+		return
+	}
+
+	// 从 Redis 中删除令牌
+	err = rdb.Del(context.Background(), tokenString).Err()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "server error"})
+		return
+	}
+
+	// 删除 cookie
+	c.SetCookie("token", "", -1, "/", "localhost", false, true)
+	c.JSON(http.StatusOK, gin.H{"message": "token revoked"})
 }
 ```
