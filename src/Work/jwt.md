@@ -21,6 +21,7 @@ func Start() {
 
 	auth := r.Group("/auth")
 	auth.Use(AuthMiddleware())
+	auth.Use(RateLimiterMiddleware())
 	auth.Use(JWTAuthMiddleware())
 
 	{
@@ -37,6 +38,20 @@ func Start() {
 middleware.go
 
 ```go
+
+var tokenBucket = NewTokenBucket(10, 1*time.Second) // 10 tokens, refill every second
+
+func RateLimiterMiddleware() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		if !tokenBucket.Take() {
+			c.JSON(http.StatusTooManyRequests, gin.H{"error": "rate limit exceeded"})
+			c.Abort()
+			return
+		}
+		c.Next()
+	}
+}
+
 func JWTAuthMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		authHeader := c.GetHeader("Authorization")
@@ -96,6 +111,57 @@ func AuthMiddleware() gin.HandlerFunc {
 		c.Request.Header.Set("Authorization", "Bearer "+token)
 		c.Next()
 	}
+}
+
+```
+
+jwtBucket.go
+```go
+type TokenBucket struct {
+	capacity     int           // 令牌桶的容量，即桶中可以持有的最大令牌数
+	tokens       int           // 桶中当前的令牌数
+	fillInterval time.Duration // 令牌填充的间隔时间
+	mu           sync.Mutex    // 互斥锁,防止并发访问时的数据竞争
+	lastFill     time.Time     // 上次填充令牌的时间
+}
+
+func NewTokenBucket(capacity int, fillInterval time.Duration) *TokenBucket {
+	return &TokenBucket{
+		capacity:     capacity,
+		tokens:       capacity,
+		fillInterval: fillInterval,
+		lastFill:     time.Now(),
+	}
+}
+
+func (tb *TokenBucket) Take() bool {
+	tb.mu.Lock()
+	defer func() {
+		tb.mu.Unlock()
+	}()
+
+	now := time.Now()
+	// 当前时间和上一次填充的时间差
+	elapsed := now.Sub(tb.lastFill)
+
+	if elapsed >= tb.fillInterval {
+		// 计算可以填充的令牌数
+		fillTokens := int(elapsed / tb.fillInterval)
+		// 更新桶中令牌数
+		tb.tokens += fillTokens
+		// 如果桶中令牌数大于容量，则将令牌数设置为容量
+		if tb.tokens > tb.capacity {
+			tb.tokens = tb.capacity
+		}
+		// 更新上次填充的时间
+		tb.lastFill = now
+	}
+	// 检查是否还有令牌可以取
+	if tb.tokens > 0 {
+		tb.tokens--
+		return true
+	}
+	return false
 }
 
 ```
