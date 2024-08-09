@@ -19,10 +19,5 @@ projects:
     desc: 链接详细描述
     link: https://链接地址
 
-  - icon: friend
-    name: 漫郁~
-    desc: 记录蜕变的自己
-    link: /friend.html
-
 footer: 豫ICP备2024072453号 
 ---
