@@ -11,7 +11,8 @@ categories:
 
 ### EXPLAIN 一个SQL语句可以查询到什么？
 
-![Image 1](2024-07-16-11-04-59.png)
+<img src="../MySQL/2024-07-16-11-04-59.png" alt="Image 1" width="800" />
+
 
 ![Image 2](2024-07-16-11-05-25.png)
 

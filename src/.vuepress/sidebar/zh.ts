@@ -43,4 +43,14 @@ export const zhSidebar = sidebar({
     },
   ],
 
+  "/Friend/": [
+    "/",
+    {
+      text: "友情链接",
+      icon: "laptop-code",
+      link: "/Friend/",
+      children: "structure",
+    },
+  ],
+
 });

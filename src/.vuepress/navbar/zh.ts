@@ -1,12 +1,13 @@
 import { navbar } from "vuepress-theme-hope";
 
+
+
 export const zhNavbar = navbar([
   "/",
 
-
   {
     text: "cahier",
-    icon: "bars",
+    icon: "list-check",
     prefix: "/",
     children:[
       {
@@ -35,34 +36,34 @@ export const zhNavbar = navbar([
   },
   {
     text: "LeetCode",
-    icon: "tag",
+    icon: "code",
     link: "/LeetCode/",
   },
 
   {
     text: "applied",
-    icon: "tag",
+    icon: "applied",
     link: "/Work/",
   },
 
 
   {
     text: "tools",
-    icon: "bars",
+    icon: "tutorial",
     prefix: "/",
     children:[
       {
       "text": "工具",
-      "icon": "folder",
+      "icon": "toolbox",
       "children": [
         {
           "text": "go",
-          "icon": "tag",
+          "icon": "golang",
           "link": "/tool/go基础/"
         },
         {
           "text": "python",
-          "icon": "tag",
+          "icon": "python",
           "link": "/tool/python基础/"
         },
       ]
@@ -71,4 +72,11 @@ export const zhNavbar = navbar([
 
   },
 
+  {
+    text: "blogroll",
+    icon: "blog",
+    link: "/friend.html",
+  },
+
+  
 ]);

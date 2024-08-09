@@ -9,7 +9,7 @@ heroFullScreen: true
 tagline: 天下之事，成于惧而败于忽
 heroImageDark: /assets/images/head2.jpg
 projects:
-  - icon: project
+  - icon: /assets/images/火.svg
     name: 今日热点
     desc: 汇聚天下大事
     link: https://sss.manyua.cn
@@ -20,9 +20,9 @@ projects:
     link: https://链接地址
 
   - icon: friend
-    name: 伙伴名称
-    desc: 伙伴详细介绍
-    link: https://你的伙伴链接
+    name: 漫郁~
+    desc: 记录蜕变的自己
+    link: /friend.html
 
 footer: 豫ICP备2024072453号 
 ---

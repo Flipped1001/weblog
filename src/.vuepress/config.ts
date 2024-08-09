@@ -35,6 +35,7 @@ dest:'dist',
       __dirname,
       "./components/BlogHero.vue",
     ),
+    "@MyCoverLink": path.resolve(__dirname, "./components/MyCoverLink.vue"),
   },
   plugins: [
     searchProPlugin({
