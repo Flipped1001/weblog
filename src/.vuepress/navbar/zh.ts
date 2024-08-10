@@ -7,7 +7,7 @@ export const zhNavbar = navbar([
 
   {
     text: "cahier",
-    icon: "list-check",
+    icon: "fenlei",
     prefix: "/",
     children:[
       {
@@ -16,17 +16,17 @@ export const zhNavbar = navbar([
       "children": [
         {
           "text": "计算机网络",
-          "icon": "star-and-crescent",
+          "icon": "fenlei1",
           "link": "/demo/计算机网络/"
         },
         {
           "text": "操作系统",
-          "icon": "star",
+          "icon": "caozuoxitong",
           "link": "/demo/计算机操作系统/"
         },
         {
           "text": "MySQL",
-          "icon": "database",
+          "icon": "mysql",
           "link": "/demo/MySQL/"
         }
       ]
@@ -42,28 +42,28 @@ export const zhNavbar = navbar([
 
   {
     text: "applied",
-    icon: "atom",
+    icon: "icon_applied",
     link: "/Work/",
   },
 
 
   {
     text: "tools",
-    icon: "toolbox",
+    icon: "tool",
     prefix: "/",
     children:[
       {
       "text": "工具",
-      "icon": "toolbox",
+      "icon": "tool",
       "children": [
         {
           "text": "go",
-          "icon": "futbol",
+          "icon": "golang",
           "link": "/tool/go基础/"
         },
         {
           "text": "python",
-          "icon": "fan",
+          "icon": "python",
           "link": "/tool/python基础/"
         },
       ]

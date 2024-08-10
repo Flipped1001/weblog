@@ -13,7 +13,8 @@ export default hopeTheme({
 
   favicon:"/assets/images/logo.svg",
 
-   iconAssets: "fontawesome-with-brands",
+
+  iconAssets: "//at.alicdn.com/t/c/font_4649342_ni7mtu7oz.css",
 
   logo: "/assets/images/logo.svg",
 
