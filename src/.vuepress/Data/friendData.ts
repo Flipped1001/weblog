@@ -18,6 +18,12 @@ export interface LinkData {
       icon: "	https://www.iknan.love/assets/logo.gif",
       link: "https://www.iknan.love/",
     },
+    {
+      name: "得鹿梦鱼",
+      desc: "分享科技与生活",
+      icon: "https://www.lsxlove.cn/upload/aa.jpg",
+      link: "https://www.lsxlove.cn/",
+    },
   ];
   export const invalid: LinkData[] = [
     

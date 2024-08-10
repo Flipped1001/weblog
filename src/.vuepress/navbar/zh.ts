@@ -28,24 +28,16 @@ export const zhNavbar = navbar([
           "text": "MySQL",
           "icon": "mysql",
           "link": "/demo/MySQL/"
+        },
+        {
+          "text": "Redis",
+          "icon": "redis1",
+          "link": "/demo/Redis/"
         }
       ]
       },
     ]
-
   },
-  {
-    text: "LeetCode",
-    icon: "leetcode",
-    link: "/LeetCode/",
-  },
-
-  {
-    text: "applied",
-    icon: "icon_applied",
-    link: "/Work/",
-  },
-
 
   {
     text: "tools",
@@ -70,6 +62,18 @@ export const zhNavbar = navbar([
       },
     ]
 
+  },
+
+  {
+    text: "LeetCode",
+    icon: "leetcode",
+    link: "/LeetCode/",
+  },
+
+  {
+    text: "applied",
+    icon: "icon_applied",
+    link: "/Work/",
   },
 
   {

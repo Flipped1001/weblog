@@ -1,0 +1,26 @@
+---
+title: 高性能的redis
+date: 2022-03-19
+tags:
+ - redis
+categories:
+ - redis
+ - 特点
+---
+
+## Redis
+
+Redis最主动的特点就是高性能，高并发；因为Redis是基于内存的且是单线程的，实现I/O的多路复用
+
+### redis和Memcached的区别：
+
+- 两者都是基于内存的数据库，一般被当作缓存来使用。
+- 都有过期策略。
+- 两者的性能都非常高。
+
+两者的区别：
+
+- redis支持的数据类型丰富（String，Hash，List，Set，Zset），而Memcached只支持最简单的key-value数据类型
+- Redis支持数据的持久化，可以将内存中的数据保存到磁盘中，重启的时候后重新加载，而Memcached没有持久化功能，数据全在内存中，Memcached重启或者挂掉，数据就没有了
+- Redis 原生支持集群模式，Memcached 没有原生的集群模式，需要依靠客户端来实现往集群中分片写入数据;
+- Redis 支持发布订阅模型、Lua 脚本、事务等功能，而 Memcached 不支持

@@ -14,7 +14,7 @@ export default hopeTheme({
   favicon:"/assets/images/logo.svg",
 
 
-  iconAssets: "//at.alicdn.com/t/c/font_4649342_8nwaxt5oxc.css",
+  iconAssets: "//at.alicdn.com/t/c/font_4649342_g6nr5uhrw5j.css",
 
   logo: "/assets/images/logo.svg",
 
@@ -33,7 +33,6 @@ export default hopeTheme({
       Gmail: "mailto:info@example.com",
       QQ: "/assets/images/QQ.jpeg",  
       Wechat: "/assets/images/WX.jpg",
-      
     },
   },
 
@@ -117,6 +116,10 @@ export default hopeTheme({
     // watermark:true, //水印
     blog: true,
 
+    comment:{
+      provider: "Waline",
+      serverURL: "https://comment1-f8i0k2l4j-flipped1001s-projects.vercel.app", // your server url
+    },
   
     components: {
       components: ["Badge", "VPCard"],

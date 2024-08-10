@@ -53,4 +53,15 @@ export const zhSidebar = sidebar({
     },
   ],
 
+  "/Redis/": [
+    "/",
+    {
+      text: "友情链接",
+      icon: "laptop-code",
+      link: "/Redis/",
+      children: "structure",
+    },
+  ],
+
+
 });

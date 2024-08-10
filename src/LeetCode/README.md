@@ -1,4 +1,5 @@
 ---
+star: true
 title: LeetCode
 index: false
 icon: server

@@ -14,6 +14,9 @@ importers:
       '@moefy-canvas/theme-popper':
         specifier: ^0.5.2
         version: 0.5.2
+      '@waline/client':
+        specifier: ^3.3.0
+        version: 3.3.0
       axios:
         specifier: ^1.7.2
         version: 1.7.2
@@ -41,7 +44,7 @@ importers:
         version: 2.0.0-rc.51(sass-loader@14.2.1(sass@1.77.8)(webpack@5.93.0))(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))
       vuepress-theme-hope:
         specifier: 2.0.0-rc.51
-        version: 2.0.0-rc.51(markdown-it@14.1.0)(sass-loader@14.2.1(sass@1.77.8)(webpack@5.93.0))(vuepress-plugin-search-pro@2.0.0-rc.51(sass-loader@14.2.1(sass@1.77.8)(webpack@5.93.0))(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32)))(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))
+        version: 2.0.0-rc.51(@waline/client@3.3.0)(markdown-it@14.1.0)(sass-loader@14.2.1(sass@1.77.8)(webpack@5.93.0))(vuepress-plugin-search-pro@2.0.0-rc.51(sass-loader@14.2.1(sass@1.77.8)(webpack@5.93.0))(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32)))(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))
 
 packages:
 
@@ -874,6 +877,14 @@ packages:
   '@vueuse/shared@10.11.0':
     resolution: {integrity: sha512-fyNoIXEq3PfX1L3NkNhtVQUSRtqYwJtJg+Bp9rIzculIZWHTkKSysujrOk2J+NrRulLTQH9+3gGSfYLWSEWU1A==, tarball: https://registry.npmmirror.com/@vueuse/shared/-/shared-10.11.0.tgz}
 
+  '@waline/api@1.0.0-alpha.8':
+    resolution: {integrity: sha512-S6pgUUfv+gcXU3hiW3PNUwiUvPy7bXmmLB/bwdU3hN5YVT5Q7CxyVSLA3oJkrNO5lcisKK1GBPv0H2W1uB0eGA==, tarball: https://registry.npmmirror.com/@waline/api/-/api-1.0.0-alpha.8.tgz}
+    engines: {node: '>=18'}
+
+  '@waline/client@3.3.0':
+    resolution: {integrity: sha512-ZQK3pWMdJyWJsETCbQdmGHfozdMccF11NqR2dwCZF0c1GpUrZym6//h1WOEeItqNF/StACDJPoE4alc5S9w6WA==, tarball: https://registry.npmmirror.com/@waline/client/-/client-3.3.0.tgz}
+    engines: {node: '>=18'}
+
   '@webassemblyjs/ast@1.12.1':
     resolution: {integrity: sha512-EKfMUOPRRUTy5UII4qJDGPpqfwjOmZ5jeGFwid9mnoqIFK+e0vqoi1qH56JpmZSzEL53jKnNzScdmftJyG5xWg==, tarball: https://registry.npmmirror.com/@webassemblyjs/ast/-/ast-1.12.1.tgz}
 
@@ -1013,6 +1024,9 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
+
+  autosize@6.0.1:
+    resolution: {integrity: sha512-f86EjiUKE6Xvczc4ioP1JBlWG7FKrE13qe/DxBCpe8GCipCq2nFw73aO8QEBKHfSbYGDN5eB9jXWKen7tspDqQ==, tarball: https://registry.npmmirror.com/autosize/-/autosize-6.0.1.tgz}
 
   axios@1.7.2:
     resolution: {integrity: sha512-2A8QhOMrbomlDuiLeK9XibIBzuHeRcqqNOHp0Cyp5EoJ1IFDh+XZH3A6BkXtv0K4gFGCI0Y4BM7B1wOEi0Rmgw==, tarball: https://registry.npmmirror.com/axios/-/axios-1.7.2.tgz}
@@ -2129,6 +2143,16 @@ packages:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==, tarball: https://registry.npmmirror.com/markdown-it/-/markdown-it-14.1.0.tgz}
     hasBin: true
 
+  marked-highlight@2.1.4:
+    resolution: {integrity: sha512-D1GOkcdzP+1dzjoColL7umojefFrASDuLeyaHS0Zr/Uo9jkr1V6vpLRCzfi1djmEaWyK0SYMFtHnpkZ+cwFT1w==, tarball: https://registry.npmmirror.com/marked-highlight/-/marked-highlight-2.1.4.tgz}
+    peerDependencies:
+      marked: '>=4 <15'
+
+  marked@12.0.2:
+    resolution: {integrity: sha512-qXUm7e/YKFoqFPYPa3Ukg9xlI5cyAtGmyEIzMfW//m6kXwCy2Ps9DYf5ioijFKQ8qyuscrHoY04iJGctu2Kg0Q==, tarball: https://registry.npmmirror.com/marked/-/marked-12.0.2.tgz}
+    engines: {node: '>= 18'}
+    hasBin: true
+
   mdn-data@2.0.28:
     resolution: {integrity: sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==, tarball: https://registry.npmmirror.com/mdn-data/-/mdn-data-2.0.28.tgz}
 
@@ -2649,6 +2673,9 @@ packages:
   readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==, tarball: https://registry.npmmirror.com/readdirp/-/readdirp-3.6.0.tgz}
     engines: {node: '>=8.10.0'}
+
+  recaptcha-v3@1.11.3:
+    resolution: {integrity: sha512-sEE6J0RzUkS+sKEBpgCD/AqCU0ffrAVOADGjvAx9vcttN+VLK42SWMkj/J/I6vHu3Kew+xcfbBqDVb65N0QGDw==, tarball: https://registry.npmmirror.com/recaptcha-v3/-/recaptcha-v3-1.11.3.tgz}
 
   relateurl@0.2.7:
     resolution: {integrity: sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==, tarball: https://registry.npmmirror.com/relateurl/-/relateurl-0.2.7.tgz}
@@ -4112,12 +4139,14 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@vuepress/plugin-comment@2.0.0-rc.38(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))':
+  '@vuepress/plugin-comment@2.0.0-rc.38(@waline/client@3.3.0)(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))':
     dependencies:
       '@vuepress/helper': 2.0.0-rc.38(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))
       giscus: 1.5.0
       vue: 3.4.32
       vuepress: 2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32)
+    optionalDependencies:
+      '@waline/client': 3.3.0
     transitivePeerDependencies:
       - typescript
 
@@ -4289,6 +4318,21 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
+  '@waline/api@1.0.0-alpha.8': {}
+
+  '@waline/client@3.3.0':
+    dependencies:
+      '@vueuse/core': 10.11.0(vue@3.4.32)
+      '@waline/api': 1.0.0-alpha.8
+      autosize: 6.0.1
+      marked: 12.0.2
+      marked-highlight: 2.1.4(marked@12.0.2)
+      recaptcha-v3: 1.11.3
+      vue: 3.4.32
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - typescript
+
   '@webassemblyjs/ast@1.12.1':
     dependencies:
       '@webassemblyjs/helper-numbers': 1.11.6
@@ -4449,6 +4493,8 @@ snapshots:
       picocolors: 1.0.1
       postcss: 8.4.39
       postcss-value-parser: 4.2.0
+
+  autosize@6.0.1: {}
 
   axios@1.7.2:
     dependencies:
@@ -5607,6 +5653,12 @@ snapshots:
       punycode.js: 2.3.1
       uc.micro: 2.1.0
 
+  marked-highlight@2.1.4(marked@12.0.2):
+    dependencies:
+      marked: 12.0.2
+
+  marked@12.0.2: {}
+
   mdn-data@2.0.28: {}
 
   mdn-data@2.0.30: {}
@@ -6083,6 +6135,8 @@ snapshots:
   readdirp@3.6.0:
     dependencies:
       picomatch: 2.3.1
+
+  recaptcha-v3@1.11.3: {}
 
   relateurl@0.2.7: {}
 
@@ -6583,14 +6637,14 @@ snapshots:
       - '@vue/composition-api'
       - typescript
 
-  vuepress-theme-hope@2.0.0-rc.51(markdown-it@14.1.0)(sass-loader@14.2.1(sass@1.77.8)(webpack@5.93.0))(vuepress-plugin-search-pro@2.0.0-rc.51(sass-loader@14.2.1(sass@1.77.8)(webpack@5.93.0))(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32)))(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32)):
+  vuepress-theme-hope@2.0.0-rc.51(@waline/client@3.3.0)(markdown-it@14.1.0)(sass-loader@14.2.1(sass@1.77.8)(webpack@5.93.0))(vuepress-plugin-search-pro@2.0.0-rc.51(sass-loader@14.2.1(sass@1.77.8)(webpack@5.93.0))(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32)))(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32)):
     dependencies:
       '@vuepress/helper': 2.0.0-rc.38(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))
       '@vuepress/plugin-active-header-links': 2.0.0-rc.38(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))
       '@vuepress/plugin-back-to-top': 2.0.0-rc.38(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))
       '@vuepress/plugin-blog': 2.0.0-rc.38(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))
       '@vuepress/plugin-catalog': 2.0.0-rc.38(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))
-      '@vuepress/plugin-comment': 2.0.0-rc.38(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))
+      '@vuepress/plugin-comment': 2.0.0-rc.38(@waline/client@3.3.0)(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))
       '@vuepress/plugin-copy-code': 2.0.0-rc.38(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))
       '@vuepress/plugin-copyright': 2.0.0-rc.38(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))
       '@vuepress/plugin-git': 2.0.0-rc.38(vuepress@2.0.0-rc.14(@vuepress/bundler-webpack@2.0.0-rc.14)(vue@3.4.32))

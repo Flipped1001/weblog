@@ -21,6 +21,7 @@
   "dependencies": {
     "@moefy-canvas/core": "^0.5.2",
     "@moefy-canvas/theme-popper": "^0.5.2",
+    "@waline/client": "^3.3.0",
     "axios": "^1.7.2",
     "glob": "^11.0.0",
     "vue-router": "^4.4.0"
