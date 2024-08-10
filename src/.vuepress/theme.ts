@@ -118,7 +118,7 @@ export default hopeTheme({
 
     comment:{
       provider: "Waline",
-      serverURL: "https://comment1-f8i0k2l4j-flipped1001s-projects.vercel.app", // your server url
+      serverURL: "https://comment1-pi.vercel.app/", // your server url
     },
   
     components: {
