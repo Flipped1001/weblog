@@ -36,7 +36,7 @@ export const zhNavbar = navbar([
   },
   {
     text: "LeetCode",
-    icon: "code",
+    icon: "leetcode",
     link: "/LeetCode/",
   },
 
