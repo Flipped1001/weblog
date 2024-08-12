@@ -15,7 +15,7 @@
             class="vp-project-image"
             :src="item.icon"
             alt=""
-            onerror='this.onerror=null,this.src=this.srcset="/assets/avatar.webp"'
+            onerror='this.onerror=null,this.src=this.srcset="../public/assets/images/2.jpg"'
           />
           <div class="vp-project-name">{{ item.name }}</div>
           <div class="vp-project-desc">{{ item.desc }}</div>

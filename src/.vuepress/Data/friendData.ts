@@ -26,6 +26,4 @@ export interface LinkData {
     },
   ];
   export const invalid: LinkData[] = [
-    
-    
   ];

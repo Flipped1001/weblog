@@ -9,6 +9,7 @@ export default hopeTheme({
 
   author: {
     name: "Flipped",
+    url:"www.flipped1001.cn",
   },
 
   favicon:"/assets/images/logo.svg",
@@ -93,7 +94,7 @@ export default hopeTheme({
 
       // page meta
       metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
+        // editLink: "在 GitHub 上编辑此页",
       },
     },
   },
