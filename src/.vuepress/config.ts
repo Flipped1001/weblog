@@ -4,6 +4,7 @@ import { getDirname, path } from "vuepress/utils";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 import { PopperShape } from "@moefy-canvas/theme-popper";
 import { popperPlugin } from "./public/vuepress-plugin-popper/index.js";
+import { hopeTheme } from "vuepress-theme-hope";
 
 
 
